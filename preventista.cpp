@@ -19,7 +19,7 @@ typedef struct {
 
 char * TiposProductos [] = {"Galletas", "Snack", "Cigarrillos", "Caramelos", "Bebibas"};
 
-//Funciones
+//Prototipo de Funciones
 
 float costoProducto(Producto productos);
 void mostrar(Cliente ** clientela, int cantidadClientes);
@@ -37,7 +37,8 @@ int main ()
 
     Cliente * puntCliente = (Cliente *)malloc(sizeof(Cliente)*cantClientes);
 
-    for (int i=0; i<cantClientes; i++) {   
+    for (int i=0; i<cantClientes; i++) {
+
         //Datos del Cliente
         puntCliente[i].ClienteID = i;
         printf("Nombre Cliente: ");
@@ -60,6 +61,7 @@ int main ()
     return 0;
 }
 
+//Calcula el costo de cada producto
 float costoProducto(Producto productos) {
     float Total= 0;
      return Total = (productos.PrecioUnitario * productos.Cantidad);
